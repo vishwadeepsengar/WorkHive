@@ -21,7 +21,7 @@ public class Employee {
     private Integer id;
     
     @ManyToOne
-    @JoinColumn(name = "company_id", nullable = false)
+    @JoinColumn(name = "company_id")
     private Company company;
     
     @ManyToOne
@@ -34,6 +34,13 @@ public class Employee {
     @Column(nullable = false)
     private String lastName;
     
+    @Column(nullable = false, unique = true)
+private String email;
+
+@Column(nullable = false)
+private String password;
+
+
     private String phone;
     
     private LocalDate joiningDate;
