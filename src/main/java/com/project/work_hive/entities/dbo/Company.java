@@ -27,9 +27,7 @@ public class Company {
     @JoinColumn(name = "company_type_id")
     private CompanyType companyType;
     
-    @ManyToOne
-    @JoinColumn(name = "created_by")
-    private Employee createdBy; // Super admin who created
+    private String created_by; // Super admin who created
     
     @CreationTimestamp
     private LocalDateTime createdAt;

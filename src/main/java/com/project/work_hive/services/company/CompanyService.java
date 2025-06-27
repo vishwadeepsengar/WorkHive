@@ -5,4 +5,6 @@ import com.project.work_hive.entities.dto.CreateCompanyRequest;
 
 public interface CompanyService {
     CompanyDTO createCompany(CreateCompanyRequest request, Integer superAdminId);
+    void deleteCompany(Integer companyId);
+
 }

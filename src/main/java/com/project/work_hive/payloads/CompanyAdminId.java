@@ -13,6 +13,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @EqualsAndHashCode
 public class CompanyAdminId implements Serializable {
-    private Long companyId;
-    private Long employeeId;
+    private int companyId;
+    private int employeeId;
 }
