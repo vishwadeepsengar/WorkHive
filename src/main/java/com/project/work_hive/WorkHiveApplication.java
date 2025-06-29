@@ -8,8 +8,6 @@ import org.modelmapper.ModelMapper;
 @SpringBootApplication
 public class WorkHiveApplication {
 
-   
-
 	public static void main(String[] args) {
 		SpringApplication.run(WorkHiveApplication.class, args);
 	}

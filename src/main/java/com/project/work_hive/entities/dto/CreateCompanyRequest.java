@@ -1,8 +1,5 @@
  package com.project.work_hive.entities.dto;
  import lombok.*;
-
-import java.util.List;
-
 @Getter
 @Setter
 @NoArgsConstructor

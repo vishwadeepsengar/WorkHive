@@ -1,25 +1,24 @@
 package com.project.work_hive.services.company;
 
-import java.time.LocalDate;
-import java.util.List;
+
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.project.work_hive.entities.dbo.Company;
-import com.project.work_hive.entities.dbo.CompanyAdmin;
+
 import com.project.work_hive.entities.dbo.CompanyType;
 import com.project.work_hive.entities.dbo.Employee;
-import com.project.work_hive.entities.dbo.Role;
+
 import com.project.work_hive.entities.dto.CompanyDTO;
 import com.project.work_hive.entities.dto.CreateCompanyRequest;
-import com.project.work_hive.payloads.CompanyAdminId;
-import com.project.work_hive.repositories.CompanyAdminRepository;
+
+
 import com.project.work_hive.repositories.CompanyRepository;
 import com.project.work_hive.repositories.CompanyTyperepository;
 import com.project.work_hive.repositories.EmployeeRepository;
-import com.project.work_hive.repositories.RoleRepository;
+
 @Service
 public class CompanyServiceImpl implements CompanyService {
        @Autowired
@@ -31,11 +30,7 @@ public class CompanyServiceImpl implements CompanyService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @Autowired
-    private RoleRepository roleRepository;
-
-    @Autowired
-    private CompanyAdminRepository companyAdminRepository;
+   
 
     @Autowired
     private ModelMapper modelMapper;

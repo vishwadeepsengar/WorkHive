@@ -17,14 +17,13 @@ public class CompanyController {
 
     // POST /api/companies/create/{superAdminId}
     @PostMapping("/create/{superAdminId}")
-    public ResponseEntity<CompanyDTO> createCompany(
-            @RequestBody CreateCompanyRequest request,
-            @PathVariable Integer superAdminId) {
+    public ResponseEntity<CompanyDTO> createCompany( @RequestBody CreateCompanyRequest request,  @PathVariable Integer superAdminId) {
 
         CompanyDTO company = companyService.createCompany(request, superAdminId);
         return ResponseEntity.ok(company);
     }
-     @DeleteMapping("/delete/{companyId}")
+
+    @DeleteMapping("/delete/{companyId}")
     public ResponseEntity<String> deleteCompany(@PathVariable Integer companyId) {
         companyService.deleteCompany(companyId);
         return ResponseEntity.ok("Company deleted successfully.");
