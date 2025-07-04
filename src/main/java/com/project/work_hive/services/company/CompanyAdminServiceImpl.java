@@ -6,9 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.project.work_hive.entities.dbo.CompanyAdmin;
 import com.project.work_hive.entities.dbo.Employee;
-import com.project.work_hive.entities.dbo.Role;
 import com.project.work_hive.entities.dto.CompanyAdminDTO;
-import com.project.work_hive.entities.dto.CompanyDTO;
 import com.project.work_hive.repositories.CompanyAdminRepository;
 import com.project.work_hive.repositories.CompanyRepository;
 import com.project.work_hive.repositories.EmployeeRepository;
