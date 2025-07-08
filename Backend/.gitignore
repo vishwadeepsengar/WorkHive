@@ -32,4 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 # App secrets
-D:\Projects\work_hive\src\main\resources\application.properties
+D:\Projects\work_hive\Backend\src\main\resources\application.properties
