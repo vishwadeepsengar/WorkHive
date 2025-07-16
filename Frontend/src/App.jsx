@@ -1,17 +1,16 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
+import React from 'react';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import Signin from './components/Profile/Signin.jsx';
 
 function App() {
-
   return (
-    <>
-      <Navbar />
-   <Hero/>
-    </>
-  )
+    <GoogleOAuthProvider clientId="">
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <Signin />
+      </div>
+    </GoogleOAuthProvider>
+  );
 }
 
-export default App
+export default App;
+

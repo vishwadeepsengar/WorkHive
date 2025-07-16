@@ -1,21 +1,32 @@
-export default function Navbar() {
-  return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur bg-white/70 border-b border-gray-200 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-2xl font-extrabold text-blue-600 tracking-tight">WorkHive</div>
-        <nav className="hidden md:flex gap-6">
-          {["Home", "Features", "About", "Get Started"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase().replace(" ", "")}`}
-              className="text-gray-700 hover:text-blue-600 font-medium transition"
-            >
-              {item}
-            </a>
-          ))}
-        </nav>
-      </div>
-    </header>
-  );
-}
+import React, { useState } from 'react';
+import { Users, Menu, X } from 'lucide-react';
+
+const Navbar = () => (
+ <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 lg:px-12 py-4  text-white border-b border-white/10">
+
+    {/* Logo */}
+    <div className="flex items-center space-x-2 text-xl font-bold">
+      <span className="bg-white w-5 h-5 block rounded-sm"></span>
+      <span>WorkHive</span>
+    </div>
+
+    {/* Right Buttons */}
+    <div className="flex items-center space-x-3 text-sm font-bold">
+      <a
+  href="#"
+  className="px-2 py-0.5 border rounded-full border-white text-white hover:bg-white hover:text-black transition"
+>
+  SIGN IN
+</a>
+         <a
+  href="#"
+  className="px-4 py-1 border rounded-full border-white text-white  hover:bg-white hover:text-black transition "
+>
+  GET STARTED
+</a>
+    </div>
+  </nav>
+);
+
+export default Navbar;
 
