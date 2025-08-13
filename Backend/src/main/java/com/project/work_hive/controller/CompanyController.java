@@ -28,4 +28,5 @@ public class CompanyController {
         companyService.deleteCompany(companyId);
         return ResponseEntity.ok("Company deleted successfully.");
     }
+
 }
