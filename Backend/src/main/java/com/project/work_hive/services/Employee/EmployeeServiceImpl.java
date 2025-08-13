@@ -9,6 +9,8 @@ import com.project.work_hive.entities.dto.EmployeeDTO;
 import com.project.work_hive.repositories.EmployeeRepository;
 import com.project.work_hive.repositories.RoleRepository;
 
+import java.util.List;
+
 @Service
 public class EmployeeServiceImpl  implements EmployeeService {
     @Autowired
@@ -47,6 +49,10 @@ public class EmployeeServiceImpl  implements EmployeeService {
         EmployeeDTO employeeDTO = modelMapper.map(employee, EmployeeDTO.class);
         return employeeDTO;
     }
+ @Override
+  public List<Employee> getEmployee(){
+        return  employeeRepository.findAll();
 
+ }
     
 }
