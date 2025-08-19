@@ -2,6 +2,7 @@ package com.project.work_hive.services.Employee;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.project.work_hive.entities.dbo.Employee;
 
@@ -30,7 +31,7 @@ public class EmployeeServiceImpl  implements EmployeeService {
             .orElseThrow(() -> new RuntimeException("Role not found")));
 
     employee.setEmail(request.getEmail());
-    employee.setPassword(request.getPassword());
+    employee.setPassword(new BCryptPasswordEncoder(12).encode(request.getPassword()));
 
     employeeRepository.save(employee);
     
