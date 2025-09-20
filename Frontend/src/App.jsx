@@ -1,14 +1,26 @@
 import React from 'react';
-import { GoogleOAuthProvider } from '@react-oauth/google';
-import Signin from './components/Profile/Signin.jsx';
 
+import Hero from './components/Hero.jsx';
+import Navbar from './components/Navbar.jsx';
+import FeaturesSection from './components/FeaturesSection.jsx';
+import SignIn from './components/Profile/SignIn.jsx';
+import SignUp from './components/Profile/SignUp.jsx';
+import Routing from './components/Routing.jsx';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UserDashboard from './components/Dashboard/UserDashboard.jsx';
 function App() {
   return (
-    <GoogleOAuthProvider clientId="">
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <Signin />
-      </div>
-    </GoogleOAuthProvider>
+    <>
+    {/* <Navbar />
+    <Hero />
+    <FeaturesSection/> */}
+    {/* <SignIn /> */}
+    {/* <BrowserRouter>
+    <Routing/>
+    </BrowserRouter> */}
+    <UserDashboard/>
+     
+    </>
   );
 }
 
